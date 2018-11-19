@@ -21,43 +21,64 @@ foreach ($item->media() as $media) {
 }
 ?>
 
-<?php echo $this->pageTitle($item->displayTitle(), 2); ?>
-<h3><?php echo $this->translate('Item'); ?></h3>
-<?php if (count($lightMedia) > 0): ?>
-<ul id="itemfiles" class="media-list">
+<div class="item-container">
+    <div id="left">
+    <?php if (count($lightMedia) > 0): ?>
+        <ul id="itemfiles" class="media-list">
     <?php foreach ($lightMedia as $media): ?>
         <?php $source = ($media->originalUrl()) ? $media->originalUrl() : $media->source(); ?>
-        <li data-src="<?php echo $source; ?>" data-thumb="<?php echo $escape($media->thumbnailUrl('medium')); ?>" class="media resource">
-            <?php echo $media->render(); ?>
-        </li>
+            <li data-src="<?php echo $source; ?>" data-thumb="<?php echo $escape($media->thumbnailUrl('medium')); ?>" class="media resource">
+        <?php echo $media->render(); ?>
+            </li>
     <?php endforeach; ?>
-</ul>
-<?php endif; ?>
-
-<?php echo $item->displayValues(); ?>
-
-<?php if (count($otherMedia) > 0): ?>
-<div id="other-media" class="property">
-    <h4><?php echo $this->translate('Other Media'); ?></h4>
-    <div class="values">
-        <?php foreach($otherMedia as $media): ?>
-        <div class="value">
-            <a href="<?php echo $media->siteUrl(); ?>"><?php echo $media->displayTitle(); ?></a>
-        </div>
+        </ul>
+    <?php endif; ?>
     </div>
-    <?php endforeach; ?>
+
+    <div id="right">
+        <?php echo $item->displayValues(); ?>
+
+        <?php if (count($otherMedia) > 0): ?>
+        <div id="other-media" class="property">
+            <h4><?php echo $this->translate('Other Media'); ?></h4>
+            <?php foreach($otherMedia as $media): ?>
+            <div class="value">
+                <a href="<?php echo $media->siteUrl(); ?>"><?php echo $media->displayTitle(); ?></a>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
+
+        <?php $xml = sprintf('/omeka/unapi?id=%s&format=rdf_dc', $item->id()); ?>
+        <div class="property">
+            <h4>내려받기</h4>
+            <div class="values">
+                <div class="value"><a href="<?php echo $xml ?>">Dublin Core 1.1 XML</a></div>
+            </div>
+        </div>
+        <?php $this->trigger('view.show.after'); ?>
+    </div>
 </div>
-<?php endif; ?>
+
+<?php //echo $this->pageTitle($item->displayTitle(), 2); ?>
+
+<?php
+// foreach ($item->values() as $key => $value) 
+// {
+// echo $key
+// echo $item->value($key);
+// }
+?>
+
+
 
 <?php $itemSets = $item->itemSets(); ?>
 <?php if (count($itemSets) > 0): ?>
 <div class="property">
     <h4><?php echo $this->translate('Item sets'); ?></h4>
-    <div class="values">
-        <?php foreach ($item->itemSets() as $itemSet): ?>
-        <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
-        <?php endforeach; ?>
-    </div>
+    <?php foreach ($item->itemSets() as $itemSet): ?>
+    <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
+    <?php endforeach; ?>
 </div>
 <?php endif; ?>
 
@@ -73,4 +94,4 @@ $subjectValues = $item->displaySubjectValues($page, 25, $property);
 </div>
 <?php endif; ?>
 
-<?php $this->trigger('view.show.after'); ?>
+

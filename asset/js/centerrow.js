@@ -43,5 +43,9 @@
             });
         }
 
+        $('a.metadata-browse-link')
+            .toggleClass('metadata-browse-link')
+            .attr('class', 'metadata-browse-link-custom')
+            .text(' ▶');
     });
 })(jQuery)

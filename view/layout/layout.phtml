@@ -32,10 +32,6 @@ $userBar = $this->userBar();
                 <?php else: ?>
                 <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
                 <?php endif; ?>
-                <div id="search-container">
-                    <?php echo $this->partial('common/search-form'); ?>
-                    <button type="button" class="search-toggle" title="Toggle search"></button>
-                </div>
                 <nav>
                 <?php
                 echo $site->publicNav()->menu()->renderMenu(null, [

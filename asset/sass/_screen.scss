@@ -673,17 +673,34 @@ footer {
     width: 3 * $spacing-l;
 }
 
+
+.item-container {
+    display: flex;
+}
+
+.item-container #left {
+    width: 50%;
+}
+
+.item-container #right {
+    width: 49%;
+    margin-left: 1%;
+    flex-direction: column;
+}
+
 .property {
     display: flex;
-    margin-bottom: $spacing-l;
+    padding-top: $spacing-s;
+    padding-bottom: $spacing-s;
     flex-wrap: wrap;
     justify-content: flex-end;
     clear: both;
+    border-bottom: 1px solid black;
 }
 
 .property h4,
 #linked-resources h4 {
-    width: span(3 of 16);
+    width: span(4 of 16);
     margin: 0;
     text-align: right;
     padding: 0 gutter();
@@ -697,14 +714,14 @@ footer {
 
 .property .values,
 .property h4 + .value {
-    width: span(13 of 16);
+    width: span(12 of 16);
     padding: 0 gutter();
-}
 
-.property .values .value:not(:last-child) {
-    border-bottom: 1px solid $gray;
-    padding-bottom: $spacing-m - 1px;
-    margin-bottom: $spacing-m;
+    &:not(:last-child) {
+        border-bottom: 1px solid $gray;
+        padding-bottom: $spacing-m - 1px;
+        margin-bottom: $spacing-m;
+    }
 }
 
 .property .value > *:first-child {
@@ -923,8 +940,7 @@ footer {
     width: 100%;
 }
 
-.page #content .breadcrumbs + .blocks,
-.page #content .blocks:first-child {
+.page #content .breadcrumbs + .blocks {
     width: 100%;
 }
 
@@ -1062,29 +1078,10 @@ footer {
     margin-top: $spacing-m;
 }
 
-.list-of-sites .site-list {
-    .site {
-        margin-bottom: $spacing-m;
-    }
-
-    .site-link {
-        display: inline-block;
-        font-size: 1.25 * $base-font-size;
-        margin-bottom: $spacing-s;
-    }
-
-    .site-summary {
-        margin: 0 0 0 $spacing-m;
-        line-height: 20px;
-    }
-}
-
 /* @end */
 
 /* @group ----- Common Modules ----- */
-
-a.metadata-browse-link {
-    display: block;
+.metadata-browse-link-custom:hover {
+    text-decoration: none;
 }
-
 /* @end */
