@@ -1088,4 +1088,49 @@ footer {
 .property > form.tagging-form {
     width: 75%;
 }
+
+/* @group ----- Common Modules (Search) ----- */
+aside.search-facets {
+    flex:3;
+    margin-right: 6em;
+    > h2 { display: none; }
+
+    li.search-facet {
+        padding-bottom: 20px;
+        border-bottom: 1px solid;
+    }
+}
+
+.search-results {
+    position: relative;
+    flex:6;
+    > h3 {
+        position: absolute;
+        margin: 0;
+        top: 0;
+        line-height: 30px;
+    }
+
+    > .search-results-header {
+        justify-content: end;
+        > .search-results-sort { display: none; }
+        > .search-results-count {
+            > nav.pagination {
+                display: flex;
+                margin: 0;
+
+                > form { display: none; }
+                > .previous { border: 0; }
+                > .next {
+                    border: 0;
+                    order: 1;
+                }
+            }
+        }
+    }
+
+    > .resource-list + nav.pagination { display: none; }
+}
+
+
 /* @end */
