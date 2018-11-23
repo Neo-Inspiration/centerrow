@@ -1104,11 +1104,7 @@ aside.search-facets {
 .search-results {
     position: relative;
     flex:6;
-    > h3 {
-        margin: 0;
-        line-height: 30px;
-    }
-
+    > h3 { margin: 0; }
     > .search-results-header {
         justify-content: flex-end;
         > .search-results-sort { display: none; }
