@@ -1123,6 +1123,7 @@ aside.search-facets {
         }
     }
 
+    > .resource-list { justify-content: flex-start; }
     > .resource-list + nav.pagination { display: none; }
 }
 
