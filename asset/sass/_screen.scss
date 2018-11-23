@@ -1107,8 +1107,9 @@ aside.search-facets {
     > h3 { margin: 0; }
     > .search-results-header {
         justify-content: flex-end;
-        > .search-results-sort { display: none; }
-        > .search-results-count {
+        > div { display: none; }
+        > div.search-results-count {
+            display: block;
             > nav.pagination {
                 display: flex;
                 margin: 0;
@@ -1123,7 +1124,20 @@ aside.search-facets {
         }
     }
 
-    > .resource-list { justify-content: flex-start; }
+    > .resource-list.grid {
+        justify-content: flex-start;
+
+        > .resource {
+            flex-basis: 50%;
+
+            > .resource-thumbnail {
+                min-width: unset;
+                max-width: unset;
+
+                > a > img { width: 100%; }
+            }
+        }
+    }
     > .resource-list + nav.pagination { display: none; }
 }
 
