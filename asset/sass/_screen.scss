@@ -1112,7 +1112,7 @@ aside.search-facets {
     }
 
     > .search-results-header {
-        justify-content: end;
+        justify-content: flex-end;
         > .search-results-sort { display: none; }
         > .search-results-count {
             > nav.pagination {
