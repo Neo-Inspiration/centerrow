@@ -1141,5 +1141,9 @@ aside.search-facets {
     > .resource-list + nav.pagination { display: none; }
 }
 
+/* @group ----- Common Modules (Reference) ----- */
+.reference-block .reference-record {
+    display: inline-block;
+}
 
 /* @end */
