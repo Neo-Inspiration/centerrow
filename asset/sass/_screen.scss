@@ -1142,8 +1142,32 @@ aside.search-facets {
 }
 
 /* @group ----- Common Modules (Reference) ----- */
+#reference-headings {
+    line-height: 2.3;
+}
+
 .reference-block .reference-record {
     display: inline-block;
+    margin-right: 12px;
+}
+
+/* @group ----- Common Modules (Folksonomy) ----- */
+.hTagcloud > ul.popularity {
+    > li {
+        font-size: 100%;
+
+        > a:visited { color: unset; }
+    }
+    
+    > li.popular a { color: #5c5c5c; }
+    > li.v-popular a { color: #555555; }
+    > li.vv-popular a { color: #424242; }
+    > li.vvv-popular a { color: #3f3f3f; }
+    > li.vvvv-popular a { color: #3a3a3a; }
+    > li.vvvvv-popular a { color: #292929; }
+    > li.vvvvvv-popular a { color: #2a2a2a; }
+    > li.vvvvvvv-popular a { color: #202020; }
+    > li.vvvvvvvv-popular a { color: #000000; }
 }
 
 /* @end */
