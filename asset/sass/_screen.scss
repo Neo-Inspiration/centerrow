@@ -713,7 +713,7 @@ footer {
 }
 
 .property .values,
-.property h4 + .value {
+.property h4 ~ .value {
     width: span(12 of 16);
     padding: 0 gutter();
 
