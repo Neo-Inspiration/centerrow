@@ -1104,6 +1104,7 @@ nav.pagination {
 
 .property > form.tagging-form {
     width: 75%;
+    > .field { justify-content: flex-start; }
 }
 
 /* @group ----- Common Modules (Search) search results ----- */

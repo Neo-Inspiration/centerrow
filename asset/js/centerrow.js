@@ -60,10 +60,15 @@
             if (noResults) {
                 $('.search-results-wrapper').siblings('form').addClass('no-results');
             }
-    
+
             if (notSearched) {
                 $('input#q').parents('form').addClass('not-searched');
             }
+        }
+
+        // ---- lSPager, lSGallery custom ----
+        if ($('.lSSlideOuter').length > 0 && $('.lSPager.lSGallery li').length < 2) {
+            $('ul.lSPager.lSGallery').hide();
         }
 
     });
