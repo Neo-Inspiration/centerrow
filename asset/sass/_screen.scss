@@ -1105,7 +1105,7 @@ nav.pagination {
     width: 75%;
 }
 
-/* @group ----- Common Modules (Search) ----- */
+/* @group ----- Common Modules (Search) search results ----- */
 
 aside.search-facets {
   flex:3;
@@ -1119,7 +1119,6 @@ aside.search-facets {
         border-bottom: 1px solid;
     }
 } 
-
 
 .search-results {
     position: relative;
@@ -1165,6 +1164,46 @@ aside.search-facets {
 
             h4 > a:hover { text-decoration: none; }
         }
+    }
+}
+
+/* @group ----- Common Modules (Search) form ----- */
+
+.field {
+    justify-content: right;
+    > .field-meta { width: unset !important; }
+    > .inputs { width: unset !important; }
+}
+
+input#q[name="q"] {
+    border-bottom: 1px solid #dedede;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+}
+
+.search-results > .noresults {
+  text-align: center;
+}
+
+form.no-results, form.not-searched {
+    .field {
+        justify-content: center;
+        margin: 8% 0 10px 0;
+    }
+
+    .field-meta { display: none; }
+
+    .inputs {
+        padding: 0;
+        width: 40%;
+    }
+
+    input#q {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        height: auto;
     }
 }
 
