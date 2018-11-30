@@ -1142,7 +1142,10 @@ aside.search-facets {
                 min-width: unset;
                 max-width: unset;
 
-                > a > img { width: 100%; }
+                > a > img {
+                    vertical-align: bottom;
+                    width: 100%;
+                }
             }
         }
     }
@@ -1219,6 +1222,8 @@ form.no-results, form.not-searched {
         font-size: 30px;
         height: auto;
     }
+
+    input#q:focus { outline: none; }
 }
 
 
