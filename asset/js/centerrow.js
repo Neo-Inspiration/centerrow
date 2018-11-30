@@ -53,7 +53,7 @@
         localStorage.setItem('search_view_type', 'grid');
 
         //  Search Page
-        if ($('.search-results-wrapper').length > 0) {
+        if ($('input#q').length > 0) {
             // set form tag class according to search result
             var noResults = $('.search-results-wrapper>.search-results>.noresults').length > 0;
             var notSearched = $('.search-results-wrapper').length == 0;
