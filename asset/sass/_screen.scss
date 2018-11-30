@@ -1107,7 +1107,66 @@ nav.pagination {
 
 /* @group ----- Common Modules (Search) ----- */
 
+aside.search-facets {
+  flex:3;
+  margin-right: 4em;
+  > h2 {
+        display: none;
+    }
 
+    li.search-facet {
+        padding-bottom: 20px;
+        border-bottom: 1px solid;
+    }
+} 
+
+
+.search-results {
+    position: relative;
+    flex:6;
+    > h3 { margin: 0; }
+
+    > .search-results-header {
+        justify-content: flex-end;
+
+        > div { display: none; }
+        > div.search-results-count { display: block; }
+    }
+
+    > .resource-list.grid {
+        justify-content: flex-start;
+
+        > .resource {
+            flex-basis: 50%;
+
+            > .resource-thumbnail {
+                min-width: unset;
+                max-width: unset;
+            }
+        }
+    }
+
+    > .resource-list + nav.pagination { display: none; }
+
+    .items.resource {
+        padding: 0 .625%;
+        position: relative;
+
+         > .resource-metadata  {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+
+            > h4 > a {
+                color: #FFF;
+                font-size: 35px;
+                line-height: 1.1;
+            }
+
+            h4 > a:hover { text-decoration: none; }
+        }
+    }
+}
 
 
 /* @group ----- Common Modules (Reference) ----- */

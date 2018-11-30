@@ -1,9 +1,9 @@
-(function($) {
-    $(document).ready(function() {
+(function ($) {
+    $(document).ready(function () {
 
         $('#search-form').addClass('closed');
 
-        $('.search-toggle').click(function() {
+        $('.search-toggle').click(function () {
             $('#search-form').toggleClass('closed').toggleClass('open');
             if ($('#search-form').hasClass('open')) {
                 $('#query').focus();
@@ -14,15 +14,15 @@
             $('#itemfiles').lightSlider({
                 mode: 'fade',
                 autoWidth: true,
-                adaptiveHeight:false,
-                gallery:true,
-                item:1,
-                loop:true,
-                thumbItem:15,
-                slideMargin:0,
+                adaptiveHeight: false,
+                gallery: true,
+                item: 1,
+                loop: true,
+                thumbItem: 15,
+                slideMargin: 0,
                 enableDrag: false,
-                currentPagerPosition:'middle',
-                onSliderLoad: function(el) {
+                currentPagerPosition: 'middle',
+                onSliderLoad: function (el) {
                     el.lightGallery({
                         selector: '#itemfiles .media',
                         download: false,
@@ -34,18 +34,22 @@
                             controls: 1
                         },
                         vimeoPlayerParams: {
-                            byline : 0,
-                            portrait : 0,
-                            color : 'A90707'
+                            byline: 0,
+                            portrait: 0,
+                            color: 'A90707'
                         },
                     });
                 }
             });
         }
 
+        // metadata-browse module custom
         $('a.metadata-browse-link')
             .toggleClass('metadata-browse-link')
             .attr('class', 'metadata-browse-link-custom')
             .text(' ▶');
+
+        // Search module custom
+        localStorage.setItem('search_view_type', 'grid');
     });
 })(jQuery)
