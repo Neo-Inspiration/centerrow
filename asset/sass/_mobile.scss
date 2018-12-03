@@ -131,6 +131,26 @@ header nav .navigation {
 
 /* @end */
 
+/* @group ----- Item-container ----- */
+
+.item-container {
+    flex-direction: column;
+    > #left { width: 100%; }
+    > #right {
+        width: 100%;
+
+        > .property > h4 { margin-bottom: $spacing-m; }
+    }
+}
+
+.property > form.tagging-form { width: 100%; }
+
+/* @group ----- Common Modules (Sharing) ----- */
+ul#sharing-buttons {
+    width: 100% !important;
+}
+
+
 /* @group ----- Search ----- */
 
 #search-filters ul li {
@@ -138,8 +158,21 @@ header nav .navigation {
     margin: 0 (.125 * $spacing-l) $spacing-m;
 }
 
-#search-results {
+.property > #search-results {
     margin-top: $spacing-m;
+}
+
+
+.item-container .property.tags {
+    flex-direction: row;
+    justify-content: flex-start;
+
+    > .value.tag {
+        width: auto !important;
+        margin-right: $spacing-m;
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
 }
 
 /* @end */

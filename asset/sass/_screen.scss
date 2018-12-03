@@ -697,12 +697,12 @@ footer {
     flex-wrap: wrap;
     justify-content: flex-end;
     clear: both;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #ccc;
 }
 
 .property h4,
 #linked-resources h4 {
-    width: span(4 of 16);
+    width: span(5 of 16);
     margin: 0;
     text-align: right;
     padding: 0 gutter();
@@ -716,7 +716,7 @@ footer {
 
 .property .values,
 .property h4 ~ .value {
-    width: span(12 of 16);
+    width: span(11 of 16);
     padding: 0 gutter();
 
     &:not(:last-child) {
@@ -1171,8 +1171,22 @@ nav.pagination {
 }
 
 .property > form.tagging-form {
-    width: 75%;
-    > .field { justify-content: flex-start; }
+    width: span(11 of 16);
+    display: flex;
+    flex-direction: row;
+    > .field {
+        justify-content: flex-start;
+        margin-bottom: 0;
+
+        input {width: 100%; }
+    }
+
+    > .field:nth-child(1) {
+        width: 70%;
+        margin: 0 1%;
+    }
+
+    > button.fa-tag { margin: 0 1%; }
 }
 
 /* @group ----- Common Modules (Search) search results ----- */
@@ -1322,7 +1336,7 @@ form.no-results, form.not-searched {
     > li.popular a { color: #8f8f8f; }
     > li.v-popular a { color: #868686; }
     > li.vv-popular a { color: #696969; }
-    > li.vvv-popular a { color: #616161; }
+    > li.vvv-popular a { color: #676767; }
     > li.vvvv-popular a { color: #575757; }
     > li.vvvvv-popular a { color: #4d4d4d; }
     > li.vvvvvv-popular a { color: #363636; }
