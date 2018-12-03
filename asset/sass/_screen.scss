@@ -1085,6 +1085,17 @@ nav.pagination {
 }
 
 /* @group ----- Common Block-layout (item-showcase) ----- */
+@keyframes onLoadAnimation {
+    0% {
+        transform: translateY(10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 .item-showcase {
     display: grid;
@@ -1097,6 +1108,7 @@ nav.pagination {
 .item-showcase > .item.resource {
     position: relative;
     margin: 0 $spacing-s $spacing-s 0;
+    animation: .7s ease-out 0s 1 onLoadAnimation;
 
     img {
         vertical-align: bottom;
