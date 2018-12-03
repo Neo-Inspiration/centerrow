@@ -332,6 +332,7 @@ header a {
     display: block;
     vertical-align: top;
     text-align: center;
+    word-break: keep-all;
 
     &:hover {
         text-decoration: none;
@@ -582,6 +583,8 @@ footer {
     font-size: $base-font-size;
     line-height: $base-line-height;
     margin-bottom: 0;
+    word-break: keep-all;
+    text-align: center;
 }
 
 .browse .resource h4 a {
