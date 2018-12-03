@@ -18,7 +18,6 @@ $query = $this->params()->fromQuery(); ?>
 <?php endif; ?>
 
 <?php echo $this->searchFilters(); ?>
-<?php echo $this->hyperlink($this->translate('Advanced search'), $this->url('site/resource', ['controller' => 'item', 'action' => 'search'], ['query' => $query], true), ['class' => 'advanced-search']); ?>
 <?php echo $this->pagination(); ?>
 <ul class="resource-list">
     <?php foreach ($items as $item): ?>
