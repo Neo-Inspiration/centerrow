@@ -1344,4 +1344,10 @@ form.no-results, form.not-searched {
     > li.vvvvvvvv-popular a { color: #000000; }
 }
 
+/* @group ----- Item-set ----- */
+.browse.item-set .resource.item_sets {
+    margin-bottom: $spacing-m;
+    span.resource-name { margin-left: $spacing-m; }
+}
+
 /* @end */
