@@ -32,7 +32,24 @@ $userBar = $this->userBar();
                 <?php else: ?>
                 <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
                 <?php endif; ?>
-                <nav>
+
+                <nav id="nav-custom">
+                    <div id="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul style="display:inline-flex;">
+                        <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    </ul>
+                </nav>
+
+                <nav id="nav-expand" style="display:none;">
                 <?php
                 echo $site->publicNav()->menu()->renderMenu(null, [
                     'maxDepth' => $this->themeSetting('nav_depth') - 1

@@ -76,5 +76,15 @@
             $('.blocks').has('.item-showcase').css('width', '100%');
         }
 
+        // ---- nav menu icon ----
+        $('#menu-icon').click(() => {
+            $('#nav-custom').toggleClass('open');
+            if ($('#nav-custom').hasClass('open')) {
+                $('#nav-expand').slideDown(100);
+            } else {
+                $('#nav-expand').slideUp(100);
+            }
+        });
+
     });
 })(jQuery)
