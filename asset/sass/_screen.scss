@@ -983,12 +983,10 @@ footer {
     margin: 0 0 $spacing-s;
 }
 
-.file,
-.item-showcase .resource {
+.file {
     width: min-content;
 }
 
-.item-showcase .resource,
 .file .resource {
     display: flex;
     flex-direction: column;
@@ -1008,7 +1006,6 @@ footer {
     }
 }
 
-.item-showcase .resource h3,
 .file .resource h3 {
     font-size: $base-font-size;
     margin: (.5 * $base-line-height) 0 0;
@@ -1035,15 +1032,6 @@ footer {
 .right.file {
     float: right;
     margin: 0 0 $spacing-l $spacing-l;
-}
-
-.item-showcase {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    clear: both;
-    justify-content: center;
-    margin: $spacing-l 0;
 }
 
 .preview-block {
@@ -1096,6 +1084,74 @@ nav.pagination {
     }
 }
 
+/* @group ----- Common Block-layout (item-showcase) ----- */
+
+.item-showcase {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    width: 100%;
+    clear: both;
+    margin: $spacing-l 0;
+}
+
+.item-showcase > .item.resource {
+    position: relative;
+    margin: 0 $spacing-s $spacing-s 0;
+
+    img {
+        vertical-align: bottom;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity ease-out 0.2s;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        p {
+            margin: $spacing-s $spacing-m;
+            color: #FFF;
+            font-size: 1.2rem;
+            line-height: 1.5em;
+        }
+    }
+
+    .cover:hover {
+        opacity: 1;
+        background-color: rgba(0,0,0,0.3);
+    }
+}
+
+.item-showcase > .item.resource:nth-child(3) {
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+    -ms-grid-column: 3 / span 2;
+    -ms-grid-row: 1 / span 2;
+
+    p {
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+    }
+}
+
+.item-showcase > .item.resource:nth-child(5) {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    -ms-grid-column: 1 / span 2;
+    -ms-grid-row: 2 / span 2;
+
+    p {
+        font-size: 2.5rem;
+        line-height: 2.8rem;
+    }
+}
 
 /* @group ----- Common Modules ----- */
 .metadata-browse-link-custom:hover {
@@ -1189,9 +1245,13 @@ aside.search-facets {
 /* @group ----- Common Modules (Search) form ----- */
 
 .field {
-    justify-content: right;
-    > .field-meta { width: unset !important; }
-    > .inputs { width: unset !important; }
+    justify-content: flex-end;
+    > .field-meta { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     }
+    > .inputs { width: auto; }
 }
 
 input#q[name="q"] {

@@ -52,7 +52,7 @@
         // ---- Search module custom ----
         localStorage.setItem('search_view_type', 'grid');
 
-        //  Search Page
+        // ---- Search Page ----
         if ($('input#q').length > 0) {
             // set form tag class according to search result
             var noResults = $('.search-results-wrapper>.search-results>.noresults').length > 0;
@@ -69,6 +69,11 @@
         // ---- lSPager, lSGallery custom ----
         if ($('.lSSlideOuter').length > 0 && $('.lSPager.lSGallery li').length < 2) {
             $('ul.lSPager.lSGallery').hide();
+        }
+
+        // ---- item-showcase block ----
+        if ($('.blocks').has('.item-showcase').length > 0) {
+            $('.blocks').has('.item-showcase').css('width', '100%');
         }
 
     });
