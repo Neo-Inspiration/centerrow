@@ -175,4 +175,9 @@ ul#sharing-buttons {
     }
 }
 
+/* @group ----- Item-set ----- */
+.browse.resource {
+    .resource-list .resource { width: 50%; }
+}
+
 /* @end */
