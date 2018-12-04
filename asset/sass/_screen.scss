@@ -1104,6 +1104,34 @@ nav.pagination {
     }
 }
 
+@keyframes navAnimation {
+    0% {
+        margin-left: -26px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 30px;
+        opacity: 1;
+    }
+}
+
+@mixin navAnimation($n) {
+    @keyframes navKeyframes#{$n} {
+        0% {
+            transform: translateY((#{$n} - 1) * 30px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    animation: .7s ease-out 0s 1 navKeyframes#{$n};
+}
+
 .item-showcase {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -1358,27 +1386,24 @@ form.no-results, form.not-searched {
 }
 
 /* @group ----- Navigation ----- */
-.nav-custom ul#ex1 {
-    background: linear-gradient( to right, rgb(220, 55, 69), rgb(255, 220, 4), rgb(20, 127, 73), rgb(70, 96, 173), rgb(103, 101, 89), rgb(45, 55, 67) );
-    margin-left: 5px;
-    li { margin: 0; }
-    a { display: inline-block; }
-    a:hover { text-decoration: none; }
-}
+.nav-custom ul {
+    margin-left: 0;
+    display: inline-flex;
 
-.nav-custom ul#ex2 {
-    margin-left: 10px;
-    li {
-        margin: 0 30px 0 0;
-    }
+    li { margin: 0 0 0 30px; }
+
     a {
         display: inline-block;
         border-radius: 100%;
-        width: 24px;
-        height: 24px;
+        width: 26px;
+        height: 26px;
     }
+
     a:hover { text-decoration: none; }
 }
+
+.nav-custom.pos ul li { animation: .7s ease-out 0s 1 navAnimation; }
+
 
 #menu-icon {
     width: 26px;
