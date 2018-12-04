@@ -32,7 +32,10 @@ $userBar = $this->userBar();
                 <?php else: ?>
                 <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
                 <?php endif; ?>
-
+<?php
+$navs = $site->navigation();
+$pages = $site->pages();
+?>
                 <nav class="nav-custom">
                     <div id="menu-icon">
                         <span></span>
@@ -40,14 +43,16 @@ $userBar = $this->userBar();
                         <span></span>
                     </div>
                     <ul>
-                    <?php foreach ($site->pages() as $page): ?>
+                    <?php foreach ($navs as $nav): ?>
                     <?php
-                        $title = $page->title();
-                        $url = $page->siteUrl();
-                        
-                        if (preg_match('/^\#.+/', $title)) {
-                            echo sprintf('<li><a href="%s" style="background-color: %s">&nbsp;</a></li>', $url, $title);
-                        }
+                    if ($nav['type'] != 'page'){ continue; }
+
+                    $title = $pages[$nav['data']['id']]->title();
+                    $url = $pages[$nav['data']['id']]->siteUrl();
+                    
+                    if (preg_match('/^\#.+/', $title)) {
+                        echo sprintf('<li><a href="%s" style="background-color: %s">&nbsp;</a></li>', $url, $title);
+                    }
                     ?>
                     <?php endforeach; ?>
                     </ul>
