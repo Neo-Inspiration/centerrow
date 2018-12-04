@@ -40,12 +40,16 @@ $userBar = $this->userBar();
                         <span></span>
                     </div>
                     <ul>
-                        <li><a href="" style="background-color: rgb(220, 55, 69)">&nbsp;</a></li>
-                        <li><a href="" style="background-color: rgb(255, 220, 4)">&nbsp;</a></li>
-                        <li><a href="" style="background-color: rgb(20, 127, 73)">&nbsp;</a></li>
-                        <li><a href="" style="background-color: rgb(70, 96, 173)">&nbsp;</a></li>
-                        <li><a href="" style="background-color: rgb(103, 101, 89)">&nbsp;</a></li>
-                        <li><a href="" style="background-color: rgb(45, 55, 67)">&nbsp;</a></li>
+                    <?php foreach ($site->pages() as $page): ?>
+                    <?php
+                        $title = $page->title();
+                        $url = $page->siteUrl();
+                        
+                        if (preg_match('/^\#.+/', $title)) {
+                            echo sprintf('<li><a href="%s" style="background-color: %s">&nbsp;</a></li>', $url, $title);
+                        }
+                    ?>
+                    <?php endforeach; ?>
                     </ul>
                 </nav>
 

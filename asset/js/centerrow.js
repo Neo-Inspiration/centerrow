@@ -91,5 +91,12 @@
             document.cookie = 'untilClose=true; expires=;';
         }
 
+        $('#nav-expand ul li').each((i, e) => {
+            let title = $(e).children('a').text();
+            if (/^\#.+/.exec(title)) {
+                $(e).remove();
+            }
+        });
+
     });
 })(jQuery)
