@@ -1359,7 +1359,7 @@ form.no-results, form.not-searched {
 
 /* @group ----- Navigation ----- */
 .nav-custom ul#ex1 {
-    background: linear-gradient( to right, red, yellow, green, blue, gray, black );
+    background: linear-gradient( to right, rgb(220, 55, 69), rgb(255, 220, 4), rgb(20, 127, 73), rgb(70, 96, 173), rgb(103, 101, 89), rgb(45, 55, 67) );
     margin-left: 5px;
     li { margin: 0; }
     a { display: inline-block; }
