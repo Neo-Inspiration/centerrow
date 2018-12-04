@@ -76,7 +76,7 @@
             $('.blocks').has('.item-showcase').css('width', '100%');
         }
 
-        // ---- nav menu icon ----
+        // ---- nav menu ----
         $('#menu-icon').click(() => {
             $('.nav-custom').toggleClass('open');
             if ($('.nav-custom').hasClass('open')) {
@@ -85,6 +85,11 @@
                 $('#nav-expand').slideUp(100);
             }
         });
+
+        if (document.cookie.indexOf('untilClose') == -1) {
+            $('.nav-custom').addClass('pos');
+            document.cookie = 'untilClose=true; expires=;';
+        }
 
     });
 })(jQuery)
