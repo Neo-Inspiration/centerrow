@@ -33,19 +33,35 @@ $userBar = $this->userBar();
                 <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
                 <?php endif; ?>
 
-                <nav id="nav-custom">
+                <nav class="nav-custom">
                     <div id="menu-icon">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-                    <ul style="display:inline-flex;">
+                    <ul id="ex1" style="display:inline-flex;">
                         <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                         <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                         <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                         <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                         <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                         <li><a href="">&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="nav-custom">
+                    <div id="menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul id="ex2" style="display:inline-flex;">
+                        <li><a href="" style="background-color:red" >&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="" style="background-color:yellow" >&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="" style="background-color:blue" >&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="" style="background-color:green" >&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="" style="background-color:gray" >&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                        <li><a href="" style="background-color:black" >&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
                     </ul>
                 </nav>
 

@@ -78,8 +78,8 @@
 
         // ---- nav menu icon ----
         $('#menu-icon').click(() => {
-            $('#nav-custom').toggleClass('open');
-            if ($('#nav-custom').hasClass('open')) {
+            $('.nav-custom').toggleClass('open');
+            if ($('.nav-custom').hasClass('open')) {
                 $('#nav-expand').slideDown(100);
             } else {
                 $('#nav-expand').slideUp(100);
