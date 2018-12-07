@@ -4,7 +4,7 @@
 
 html {
     // font: #{$base-font-size}/#{$base-line-height} "Crimson Text", serif;
-    font: #{$base-font-size}/#{$base-line-height} "gg batang", sans-serif;
+    font: #{$base-font-size}/#{$base-line-height} "Noto Sans KR", sans-serif;
     color: #676767;
 }
 
@@ -298,6 +298,7 @@ nav ul {
 
 header {
     margin-bottom: $spacing-l;
+    position: relative;
 }
 
 header nav .navigation {
@@ -1104,34 +1105,6 @@ nav.pagination {
     }
 }
 
-@keyframes navAnimation {
-    0% {
-        margin-left: -26px;
-        opacity: 0;
-    }
-
-    100% {
-        margin-left: 30px;
-        opacity: 1;
-    }
-}
-
-@mixin navAnimation($n) {
-    @keyframes navKeyframes#{$n} {
-        0% {
-            transform: translateY((#{$n} - 1) * 30px);
-            opacity: 0;
-        }
-
-        100% {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    animation: .7s ease-out 0s 1 navKeyframes#{$n};
-}
-
 .item-showcase {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -1165,8 +1138,9 @@ nav.pagination {
         p {
             margin: $spacing-s $spacing-m;
             color: #FFF;
-            font-size: 1.2rem;
-            line-height: 1.5em;
+            font-size: 24px;
+            line-height: 30px;
+            word-break: keep-all;
         }
     }
 
@@ -1177,26 +1151,22 @@ nav.pagination {
 }
 
 .item-showcase > .item.resource:nth-child(3) {
-    grid-column: 3 / 5;
-    grid-row: 1 / 3;
-    -ms-grid-column: 3 / span 2;
-    -ms-grid-row: 1 / span 2;
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
 
     p {
-        font-size: 2.5rem;
-        line-height: 2.8rem;
+        font-size: 42px;
+        line-height: 1.2
     }
 }
 
 .item-showcase > .item.resource:nth-child(5) {
-    grid-column: 1 / 3;
-    grid-row: 2 / 4;
-    -ms-grid-column: 1 / span 2;
-    -ms-grid-row: 2 / span 2;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
 
     p {
-        font-size: 2.5rem;
-        line-height: 2.8rem;
+        font-size: 42px;
+        line-height: 1.2;
     }
 }
 
@@ -1388,21 +1358,24 @@ form.no-results, form.not-searched {
 /* @group ----- Navigation ----- */
 .nav-custom ul {
     margin-left: 0;
-    display: inline-flex;
+    display: flex;
+    justify-content: space-between;
 
-    li { margin: 0 0 0 30px; }
+    li {
+        flex: 0 1 25%;
+        height: 10px;
+        margin: 0;
+    }
+    li:not(:first-child) { margin: 0 15px 0 0; }
 
     a {
         display: inline-block;
-        border-radius: 100%;
-        width: 26px;
-        height: 26px;
+        width: 100%;
+        height: 100%;
     }
 
     a:hover { text-decoration: none; }
 }
-
-.nav-custom.pos ul li { animation: .7s ease-out 0s 1 navAnimation; }
 
 
 #menu-icon {
