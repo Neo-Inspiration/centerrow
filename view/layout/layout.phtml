@@ -29,19 +29,20 @@ $userBar = $this->userBar();
             <header>
                 <?php if ($this->themeSetting('logo')): ?>
                 <a href="<?php echo $site->url(); ?>" class="site-title"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
-                <?php else: ?>
-                <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
                 <?php endif; ?>
 <?php
 $navs = $site->navigation();
 $pages = $site->pages();
 ?>
+
+                <nav id="nav-expand">
+                <?php
+                echo $site->publicNav()->menu()->renderMenu(null, [
+                    'maxDepth' => $this->themeSetting('nav_depth') - 1
+                ]);
+                ?>
+                </nav>
                 <nav class="nav-custom">
-                    <div id="menu-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
                     <ul>
                     <?php foreach ($navs as $nav): ?>
                     <?php
@@ -56,14 +57,6 @@ $pages = $site->pages();
                     ?>
                     <?php endforeach; ?>
                     </ul>
-                </nav>
-
-                <nav id="nav-expand" style="display:none;">
-                <?php
-                echo $site->publicNav()->menu()->renderMenu(null, [
-                    'maxDepth' => $this->themeSetting('nav_depth') - 1
-                ]);
-                ?>
                 </nav>
             </header>
 

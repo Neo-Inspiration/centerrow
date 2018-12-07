@@ -77,15 +77,6 @@
         }
 
         // ---- nav menu ----
-        $('#menu-icon').click(() => {
-            $('.nav-custom').toggleClass('open');
-            if ($('.nav-custom').hasClass('open')) {
-                $('#nav-expand').slideDown(100);
-            } else {
-                $('#nav-expand').slideUp(100);
-            }
-        });
-
         $('#nav-expand ul li').each((i, e) => {
             let title = $(e).children('a').text();
             if (/^\#.+/.exec(title)) {
