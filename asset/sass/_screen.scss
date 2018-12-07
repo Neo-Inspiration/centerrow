@@ -1322,6 +1322,8 @@ form.no-results, form.not-searched {
 
 /* @group ----- Common Modules (Reference) ----- */
 .reference-block {
+    margin-bottom: 40px;
+
     > #reference-headings {
         line-height: 2.3;
 
@@ -1341,7 +1343,6 @@ form.no-results, form.not-searched {
             }
         }
     }
-
 }
 
 /* @group ----- Common Modules (Folksonomy) ----- */
@@ -1427,13 +1428,18 @@ form.no-results, form.not-searched {
     justify-content: flex-start;
 }
 
+/* @group ----- Line break ----- */
+
 .break {
-    margin: 10px 0;
+    margin: 30px 0;
     height: 1px;
 }
 
 .break.opaque {
     background: #ccc;
 }
+
+
+
 
 /* @end */
