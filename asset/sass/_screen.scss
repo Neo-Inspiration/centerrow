@@ -1383,9 +1383,9 @@ form.no-results, form.not-searched {
     > li.vvv-popular:hover, > li.vvvv-popular:hover, > li.vvvvv-popular:hover,
     > li.vvvvvv-popular:hover, > li.vvvvvvv-popular:hover, > li.vvvvvvvv-popular:hover
     {
-        color: #FFF;
         background-color: #29c06d;
-        border: 0;
+        border-color: #FFF;
+        a { color: #FFF; }
     }
 }
 
