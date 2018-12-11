@@ -1440,9 +1440,10 @@ form.no-results, form.not-searched {
 
     li:hover {
         background-color: #FFF;
-        a:hover {
+        a {
             color: #000;
             text-decoration: none;
+            font-weight: 700;
         }
     }
 }

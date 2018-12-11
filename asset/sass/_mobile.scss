@@ -154,9 +154,21 @@ ul#sharing-buttons {
 
 /* @group ----- Common Modules (Simple Carousel) ----- */
 #siema-ui p#carousel-title {
+    font-size: 20px;
+    padding: 20px 25px;
     word-break: keep-all;
-    line-height: 1;
+    line-height: 1.1;
 }
+
+.siema, #siema-ui {
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.siema-wrap { height: 250px !important; }
 
 /* @group ----- Search ----- */
 
