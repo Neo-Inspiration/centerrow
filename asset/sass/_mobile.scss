@@ -1,7 +1,6 @@
 /* @group ----- Containers ----- */
 
-#wrap,
-footer {
+#wrap {
     padding: 0 $spacing-l;
 }
 
@@ -9,8 +8,11 @@ footer {
 
 /* @group ----- Forms ----- */
 
+form.no-results .inputs, form.not-searched .inputs {
+    width: 100%
+}
+
 .field .label,
-.field label,
 .field .field-meta,
 .media-list {
     width: 100%;
@@ -18,7 +20,7 @@ footer {
     margin-bottom: $spacing-s;
 }
 
-.field .inputs{
+.field .inputs {
     width: 100%;
 }
 
@@ -150,6 +152,11 @@ ul#sharing-buttons {
     width: 100% !important;
 }
 
+/* @group ----- Common Modules (Simple Carousel) ----- */
+#siema-ui p#carousel-title {
+    word-break: keep-all;
+    line-height: 1;
+}
 
 /* @group ----- Search ----- */
 
@@ -209,7 +216,7 @@ ul#sharing-buttons {
     > .item.resource:nth-child(1),
     > .item.resource:nth-child(5) {
         p {
-            font-size: 42px;
+            font-size: 32px;
             line-height: 1.2;
         }
     }
@@ -221,6 +228,11 @@ ul#sharing-buttons {
         -ms-grid-row: unset;
     }
 
+}
+
+/* @group ----- footer ----- */
+footer {
+    padding: $spacing-l;
 }
 
 /* @end */

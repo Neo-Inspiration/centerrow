@@ -335,7 +335,6 @@ header a {
     letter-spacing: .125em;
     margin: (2 * $spacing-l) 0 0;
     display: block;
-    vertical-align: top;
     text-align: center;
     word-break: keep-all;
 
@@ -1353,10 +1352,7 @@ form.no-results, form.not-searched {
         line-height: 50px;
         white-space: nowrap;
 
-        > a:hover {
-            text-decoration: none;
-            color: inherit;
-        }
+        > a:hover { text-decoration: none; }
         > a:visited { color: unset; }
     }
 
@@ -1395,6 +1391,11 @@ form.no-results, form.not-searched {
     width: 3%;
 }
 
+#siema-ui p#carousel-title {
+    font-size: 50px;
+    padding: 40px 45px;
+}
+
 /* @group ----- Item-set ----- */
 .browse.item-set .resource.item_sets {
     margin-bottom: $spacing-m;
@@ -1426,6 +1427,15 @@ form.no-results, form.not-searched {
 #nav-expand .navigation {
     border: 0;
     justify-content: flex-start;
+
+    li {
+        background-color: #000;
+
+        a {
+            color: #FFF;
+            padding: 0 2px;
+        }
+    }
 }
 
 /* @group ----- Line break ----- */
