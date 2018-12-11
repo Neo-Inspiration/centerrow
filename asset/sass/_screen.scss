@@ -1393,8 +1393,8 @@ form.no-results, form.not-searched {
 }
 
 #siema-ui p#carousel-title {
-    font-size: 50px;
-    padding: 40px 45px;
+    font-size: 70px;
+    padding: 60px 55px;
 }
 
 /* @group ----- Item-set ----- */
@@ -1427,7 +1427,7 @@ form.no-results, form.not-searched {
 
 #nav-expand .navigation {
     border: 0;
-    justify-content: flex-start;
+    justify-content: flex-end;
 
     li {
         background-color: #000;
@@ -1435,6 +1435,14 @@ form.no-results, form.not-searched {
         a {
             color: #FFF;
             padding: 0 2px;
+        }
+    }
+
+    li:hover {
+        background-color: #FFF;
+        a:hover {
+            color: #000;
+            text-decoration: none;
         }
     }
 }
