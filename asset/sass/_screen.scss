@@ -1375,10 +1375,11 @@ form.no-results, form.not-searched {
     > li.vvvvvv-popular { border: 1px solid #363636; }
     > li.vvvvvvv-popular { border: 1px solid #202020; }
     > li.vvvvvvvv-popular { border: 1px solid #000000; }
+    > li.vvvvvvvvㅍ-popular { border: 1px solid #000000; }
 
-    > li.popular:hover, > li.v-popular:hover, > li.vv-popular:hover,
-    > li.vvv-popular:hover, > li.vvvv-popular:hover, > li.vvvvv-popular:hover,
-    > li.vvvvvv-popular:hover, > li.vvvvvvv-popular:hover, > li.vvvvvvvv-popular:hover
+    > li.popular:hover, > li.v-popular:hover, > li.vv-popular:hover, > li.vvv-popular:hover,
+    > li.vvvv-popular:hover, > li.vvvvv-popular:hover, > li.vvvvvv-popular:hover,
+    > li.vvvvvvv-popular:hover, > li.vvvvvvvv-popular:hover, > li.vvvvvvvv-popular:hover
     {
         background-color: #29c06d;
         border-color: #29c06d;
