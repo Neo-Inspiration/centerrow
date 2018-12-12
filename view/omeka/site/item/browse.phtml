@@ -9,6 +9,9 @@ $query = $this->params()->fromQuery(); ?>
 <?php if (isset($itemSet)): ?>
     <?php echo $this->pageTitle($itemSet->displayTitle(), 2); ?>
     <h3><?php echo $this->translate('Item Set'); ?></h3>
+    
+    <br/>
+    <br/>
     <div class="metadata">
         <?php echo $itemSet->displayValues(); ?>
     </div>
@@ -23,7 +26,7 @@ $query = $this->params()->fromQuery(); ?>
     <?php foreach ($items as $item): ?>
     <li class="item resource">
         <?php if ($primaryMedia = $item->primaryMedia()): ?>
-        <?php echo $item->linkRaw($this->thumbnail($primaryMedia, 'medium')); ?>
+        <?php echo $item->linkRaw($this->thumbnail($primaryMedia, 'square')); ?>
         <?php endif; ?>
         <h4><?php echo $item->link($item->displayTitle()); ?></h4>
         <?php if ($date = $item->value('dcterms:date')): ?>
