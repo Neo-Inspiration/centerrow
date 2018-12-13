@@ -84,5 +84,19 @@
             }
         });
 
+        // ---- html toggle ----
+        let policy = $('#cc-policy');
+        let detail = $('#cc-policy-detail');
+        if (policy.length > 0 && detail.length > 0) {
+            policy.click(() => {
+                let visible = detail.css('display') !== "none";
+
+                if (visible) {
+                    detail.slideUp();
+                } else {
+                    detail.slideDown();
+                }
+            });
+        }
     });
 })(jQuery)
